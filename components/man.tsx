@@ -25,9 +25,9 @@ export function ManPage({
   return (
     <div className="page">
       <header className="bar bar-top">
-        <span>{mantitle}</span>
+        <span></span>
         <span className="bar-mid">Protocol Engineer&apos;s Manual</span>
-        <span className="bar-end">{mantitle}</span>
+        <span className="bar-end"></span>
       </header>
 
       {showNav && (

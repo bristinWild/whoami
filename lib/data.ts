@@ -37,7 +37,7 @@ export const data = {
 
   /** Shown on the landing page. */
   summary:
-    "i do graffiti with a keyboard on blockchains, so nobody can paint over it. I build protocol infrastructure, developer tooling and local-first software, with privacy as the default rather than a setting. Smart contracts, Rust, and proofs that say something is true and not a word more.",
+    "i do graffiti with a keyboard on blockchains, so nobody can paint over it. i build protocol infrastructure, developer tooling and local-first software, with privacy as the default rather than a setting. smart contracts, Rust, and proofs that say something is true and not a word more.",
   status: "Open to full-time roles and protocol engineering contracts. Guwahati, India - remote.",
 
   stack: [
@@ -87,10 +87,11 @@ export const data = {
       ],
     },
     {
-      role: "Co-Founder",
+      role: "Co-Founder * COO",
       company: "Luster.network",
       period: "Jun 2021 - Jul 2022",
       bullets: [
+        "Scaled the company from 0 - $32000 in revenue in 6 months, with 3 full-time employees and 5 contractors.",
         "Built a Web3 learning community and contributed to a proof-of-engagement platform.",
         "Ran workshops and events across colleges and communities.",
         "Operated bootcamps to onboard developers into Web3.",
@@ -128,7 +129,7 @@ export const data = {
         "Tuniq runs private predicates on Logos LEZ and proves the result with RISC Zero. The proof settles to Solana, so a program there can act on the answer without ever seeing the underlying data.",
         "It started as a set of research experiments and is now being built out as a standalone layer.",
       ],
-      stack: ["logos", "rust", "risc zero", "logos lez", "SBFT", "solana"],
+      stack: ["logos", "rust", "risc zero", "logos lez", "sBPF", "solana"],
       status: "In active development.",
       links: [
         { label: "main repository", url: "https://github.com/bristinWild/Tuniq" },
