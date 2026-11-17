@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { data, routes, type RouteName } from "@/lib/data";
+import Image from "next/image";
 
 /** A full page laid out like a Unix manual page. */
 export function ManPage({
@@ -8,6 +9,7 @@ export function ManPage({
   current,
   back,
   next,
+  cover,
   children,
 }: {
   /** Upper-case page name shown in the header and footer, e.g. "BORAH-WORK". */
@@ -17,6 +19,7 @@ export function ManPage({
   /** Replaces the page nav with a single back link (used on project pages). */
   back?: { label: string; href: string };
   next?: { label: string; href: string };
+  cover?: { src: string; alt: string };
   children: ReactNode;
 }) {
   const mantitle = `${title}`;
@@ -24,10 +27,15 @@ export function ManPage({
 
   return (
     <div className="page">
+      {cover && (
+        <div className="cover">
+          <Image src={cover.src} alt={cover.alt} fill priority sizes="100vw" />
+        </div>
+      )}
       <header className="bar bar-top">
         <span></span>
-        <span className="bar-mid">Protocol Engineer&apos;s Manual</span>
-        <span className="bar-end"></span>
+        {/* <span className="bar-mid">Protocol Engineer&apos;s Manual</span> */}
+
       </header>
 
       {showNav && (

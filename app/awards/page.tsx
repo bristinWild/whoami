@@ -6,7 +6,7 @@ export const metadata: Metadata = { title: "Awards" };
 
 export default function AwardsPage() {
   return (
-    <ManPage title="BRISTIN-AWARDS" current="awards" next={{ label: "next: stack →", href: "/stack" }}>
+    <ManPage title="BRISTIN-AWARDS" current="awards" next={{ label: "next: articles →", href: "/articles" }}>
       <Section name="NAME">
         <p>bristin-awards - prizes and recognition</p>
       </Section>

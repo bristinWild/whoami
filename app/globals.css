@@ -409,3 +409,121 @@ p {
     flex-basis: 100%;
   }
 }
+
+/* ---------- articles ---------- */
+
+body {
+  overflow-x: clip;
+}
+
+.cover {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-top: -40px;
+  margin-bottom: -16px;
+  height: clamp(150px, 26vw, 280px);
+  overflow: hidden;
+  border-bottom: 1px solid var(--rule);
+  background: var(--hover);
+}
+
+.cover img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  color: var(--body);
+}
+
+.article-head {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.article-head h1 {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.35;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.article-meta {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.article h2 {
+  margin: 24px 0 0;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.article strong {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.article ul,
+.article ol {
+  margin: 0;
+  padding-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.article li::marker {
+  color: var(--accent);
+}
+
+.article hr {
+  width: 100%;
+  border: 0;
+  border-top: 1px solid var(--rule);
+  margin: 16px 0 0;
+}
+
+.article-table {
+  overflow-x: auto;
+}
+
+.article table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.article th,
+.article td {
+  text-align: left;
+  vertical-align: top;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.article th {
+  color: var(--text);
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .cover {
+    margin-top: -24px;
+  }
+
+  .article-head h1 {
+    font-size: 20px;
+  }
+}

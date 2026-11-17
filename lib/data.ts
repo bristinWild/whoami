@@ -342,6 +342,7 @@ export const routes = [
   { name: "projects", href: "/projects" },
   { name: "open-source", href: "/open-source" },
   { name: "awards", href: "/awards" },
+  { name: "articles", href: "/articles" },
   { name: "stack", href: "/stack" },
 ] as const;
 

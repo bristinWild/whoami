@@ -23,7 +23,7 @@ export default async function ProjectPage(props: PageProps<"/projects/[slug]">) 
   const others = data.projects.filter((p) => p.slug !== project.slug).slice(0, 3);
 
   return (
-    <ManPage title={project.name.toUpperCase()} back={{ label: "borah-projects", href: "/projects" }}>
+    <ManPage title={project.name.toUpperCase()} back={{ label: "other-projects", href: "/projects" }}>
       <Section name="NAME">
         <p>
           {project.name} - {project.tagline}

@@ -1,5 +1,6 @@
 import { data } from "@/lib/data";
 import { Entry, Links, ManPage, Section, StatusLine, seeAlso } from "@/components/man";
+import { articles } from "@/lib/articles";
 
 export default function Home() {
   const orgs = new Set(data.openSource.map((c) => c.repo.split("/")[0])).size;
@@ -40,6 +41,13 @@ export default function Home() {
           cmd="awards"
           desc="logos lambda prizes"
           meta={data.awards.map((a) => a.code).join(", ")}
+        />
+
+        <Entry
+          href="/articles"
+          cmd="articles"
+          desc="research and writing - privacy, rpc, logos"
+          meta={`${articles.length} ${articles.length === 1 ? "entry" : "entries"}`}
         />
         <Entry href="/stack" cmd="stack" desc="languages, chains and tools i use" meta={`${data.stack.length} groups`} />
       </Section>
