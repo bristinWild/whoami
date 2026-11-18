@@ -49,7 +49,7 @@ export default async function ArticlePage(props: PageProps<"/articles/[slug]">) 
     const markdown = await readArticle(slug);
 
     return (
-        <ManPage title="BRISTIN-ARTICLES" back={{ label: "other-articles", href: "/articles" }} cover={article.cover}>
+        <ManPage title="BRISTIN-ARTICLES" back={{ label: "back", href: "/articles" }} cover={article.cover}>
             <article className="article">
                 <header className="article-head">
                     <h1>{article.title}</h1>

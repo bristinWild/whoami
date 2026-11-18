@@ -44,7 +44,7 @@ export function ManPage({
             <Link href={back.href}>← {back.label}</Link>
           ) : (
             <>
-              <Link href="/">← bristin</Link>
+
               <ul>
                 {routes.map((r) => (
                   <li key={r.name}>
@@ -56,6 +56,7 @@ export function ManPage({
                   </li>
                 ))}
               </ul>
+              <Link href="/">← back</Link>
             </>
           )}
         </nav>
