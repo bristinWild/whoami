@@ -11,6 +11,21 @@ export type Article = {
 };
 
 export const articles: Article[] = [
+
+    {
+        slug: "what-you-see-isnt-what-you-sign",
+        cmd: "safe-signing",
+        title: "What You See Isn't What You Sign",
+        summary:
+            "Why the biggest crypto thefts broke the screen, not the code, and what it takes to make signing safe.",
+        date: "2026-11-19",
+        readingTime: "8 min read",
+        cover: {
+            src: "/articles/what-you-see-isnt-what-you-sign.png",
+            alt: "A transfer on screen next to the contract upgrade actually signed, under the title: what you see isn't what you sign",
+        },
+        tags: ["security", "signing", "ethereum", "logos"],
+    },
     {
         slug: "your-wallet-has-already-told-someone",
         cmd: "rpc-privacy",
