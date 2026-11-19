@@ -10,6 +10,7 @@ export function ManPage({
   back,
   next,
   cover,
+  corner,
   children,
 }: {
   /** Upper-case page name shown in the header and footer, e.g. "BORAH-WORK". */
@@ -20,6 +21,7 @@ export function ManPage({
   back?: { label: string; href: string };
   next?: { label: string; href: string };
   cover?: { src: string; alt: string };
+  corner?: ReactNode;
   children: ReactNode;
 }) {
   const mantitle = `${title}`;
@@ -35,7 +37,7 @@ export function ManPage({
       <header className="bar bar-top">
         <span></span>
         {/* <span className="bar-mid">Protocol Engineer&apos;s Manual</span> */}
-
+        {corner}
       </header>
 
       {showNav && (
