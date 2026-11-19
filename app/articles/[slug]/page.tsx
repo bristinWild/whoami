@@ -6,6 +6,8 @@ import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { articles, formatDate, getArticle } from "@/lib/articles";
 import { ManPage } from "@/components/man";
+import rehypeBionic from "@/lib/rehype-bionic";
+import { BionicToggle } from "@/components/bionic-toggle";
 
 export function generateStaticParams() {
     return articles.map((a) => ({ slug: a.slug }));
@@ -49,7 +51,12 @@ export default async function ArticlePage(props: PageProps<"/articles/[slug]">) 
     const markdown = await readArticle(slug);
 
     return (
-        <ManPage title="BRISTIN-ARTICLES" back={{ label: "back", href: "/articles" }} cover={article.cover}>
+        <ManPage
+            title="BRISTIN-ARTICLES"
+            back={{ label: "back", href: "/articles" }}
+            cover={article.cover}
+            corner={<BionicToggle />}
+        >
             <article className="article">
                 <header className="article-head">
                     <h1>{article.title}</h1>
@@ -60,6 +67,7 @@ export default async function ArticlePage(props: PageProps<"/articles/[slug]">) 
 
                 <Markdown
                     remarkPlugins={[remarkGfm]}
+                    rehypePlugins={[rehypeBionic]}
                     components={{
                         a: ({ href, children }) =>
                             href?.startsWith("http") ? (
